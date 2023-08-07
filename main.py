@@ -23,18 +23,14 @@ print("===========================================")
 print('PERINGATAN : TIDAK UNTUK DI PERJUAL-BELIKAN')
 print("===========================================\n")
 
-time.sleep(1)
+
 
 channel_id = input("Masukkan ID channel: ")
 waktu2 = int(input("Set Waktu Kirim Pesan: "))
 
-time.sleep(1)
 print("3")
-time.sleep(1)
 print("2")
-time.sleep(1)
 print("1")
-time.sleep(1)
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -68,7 +64,7 @@ while True:
                 break
             else:
                 message_id = messages[0]['id']
-                response = requests.delete(f'https://discord.com/api/v9/channels/{channel_id}/messages/{message_id}', headers=headers)
+                
                 if response.status_code == 204:
                     print(Fore.GREEN + f'Pesan dengan ID {message_id} berhasil dihapus')
                 else:
@@ -76,4 +72,4 @@ while True:
         else:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
 
-        time.sleep(waktu2)
+        
