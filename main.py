@@ -23,13 +23,17 @@ print("===========================================")
 print('PERINGATAN : TIDAK UNTUK DI PERJUAL-BELIKAN')
 print("===========================================\n")
 
-
+time.sleep(1)
 
 channel_id = input("Masukkan ID channel: ")
 waktu2 = int(input("Set Waktu Kirim Pesan: "))
 
+
+time.sleep(1)
 print("3")
+time.sleep(1)
 print("2")
+time.sleep(1)
 print("1")
 
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -73,3 +77,6 @@ while True:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
 
         
+
+
+        time.sleep(1)
