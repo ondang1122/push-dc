@@ -67,8 +67,6 @@ while True:
                 is_running = False
                 break
             else:
-                time.sleep(waktu1)
-
                 message_id = messages[0]['id']
                 response = requests.delete(f'https://discord.com/api/v9/channels/{channel_id}/messages/{message_id}', headers=headers)
                 if response.status_code == 204:
