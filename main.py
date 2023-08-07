@@ -26,8 +26,8 @@ print("===========================================\n")
 time.sleep(1)
 
 channel_id = input("Masukkan ID channel: ")
+waktu1 = int(input("Set Waktu Hapus Pesan: "))
 waktu2 = int(input("Set Waktu Kirim Pesan: "))
-
 
 time.sleep(1)
 print("3")
@@ -68,6 +68,8 @@ while True:
                 is_running = False
                 break
             else:
+                time.sleep(waktu1)
+
                 message_id = messages[0]['id']
                 
                 if response.status_code == 204:
@@ -76,5 +78,5 @@ while True:
                     print(Fore.RED + f'Gagal menghapus pesan dengan ID {message_id}: {response.status_code}')
         else:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
-            
-        time.sleep(1)
+
+        time.sleep(waktu2)
