@@ -35,6 +35,7 @@ time.sleep(1)
 print("2")
 time.sleep(1)
 print("1")
+time.sleep(1)
 
 os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -75,8 +76,5 @@ while True:
                     print(Fore.RED + f'Gagal menghapus pesan dengan ID {message_id}: {response.status_code}')
         else:
             print(f'Gagal mendapatkan pesan di channel: {response.status_code}')
-
-        
-
-
+            
         time.sleep(1)
